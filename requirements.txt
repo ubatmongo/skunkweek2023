@@ -1,3 +1,4 @@
+docopt-ng==0.8.1
 certifi==2022.12.07
 cryptography~=37.0
 evergreen.py==3.4.3

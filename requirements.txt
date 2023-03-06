@@ -1,0 +1,13 @@
+certifi==2022.12.07
+cryptography~=37.0
+evergreen.py==3.4.3
+gitpython==3.1.30
+gnupg==2.3.1
+jira==3.4.0
+pyyaml==5.4.1
+pymongo[srv]==3.13.0
+slackclient==2.9.3
+regex==2022.8.17
+requests==2.28.1
+urllib3==1.26.12
+yarl==1.8.1

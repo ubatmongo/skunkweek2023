@@ -1,4 +1,4 @@
-"""verify release branch project configuration
+"""unroll a slack thread
 
 Usage:
     thread_unroller.py (--thread THREAD_URL) [--pdf] [--verbose]

@@ -23,7 +23,7 @@ This tool will help us keep a copy of that.
   - PDF: `python3 <path>/slack_thread_unroll/thread_unroller.py --thread https://mdb-sandboxenterprise.slack.com/archives/C04SUBZ2X27/p1678222095655119 --pdf --verbose 
   - txt: `python3 <path>/slack_thread_unroll/thread_unroller.py --thread https://mdb-sandboxenterprise.slack.com/archives/C04SUBZ2X27/p1678222095655119 
 
-```json
+```bash
 {'message': 'Unrolling a Slack thread'}
 {'message': 'Going to unroll a Slack thread', 'thread': 'https://mdb-sandboxenterprise.slack.com/archives/C04SUBZ2X27/p1678222095655119', 'is_pdf': False}
 {'message': 'Slack conversation details', 'channel_id': 'C04SUBZ2X27', 'thread_timestamp': '1678222095.655119'}
@@ -44,4 +44,15 @@ period of time and reports if
 - Source code: _evergreen_task_regression_
 - run:
   - `python3 <path>/evergreen_task_regression/task_regression.py --project mms --tasks COMPILE_BAZEL,COMPILE_CLIENT_BAZEL,COMPILE_SERVER --variants code_health --period 30 --weekly --verbose 
- 
+```bash
+{'message': 'Attempting to find task regression'}
+{'message': 'Max time for task regressed by more than 10%', 'task_variant': 'COMPILE_BAZEL-code_health', 'min_duration': '123.87secs', 'max_duration': '137.1secs', 'regression': 10.68}
+{'message': 'Task duration regressed by more than 10% from min duration', 'task_date': datetime.date(2023, 2, 7), 'min_duration': '123.87secs', 'task_duration': '137.1secs', 'regression': 10.68}
+{'message': 'Max time for task regressed by more than 10%', 'task_variant': 'COMPILE_CLIENT_BAZEL-code_health', 'min_duration': '121.68secs', 'max_duration': '153.6secs', 'regression': 26.24}
+{'message': 'Task duration regressed by more than 10% from min duration', 'task_date': datetime.date(2023, 2, 7), 'min_duration': '121.68secs', 'task_duration': '153.6secs', 'regression': 26.24}
+{'message': 'Task duration regressed by more than 10% from min duration', 'task_date': datetime.date(2023, 2, 14), 'min_duration': '121.68secs', 'task_duration': '133.97secs', 'regression': 10.11}
+{'message': 'Max time for task regressed by more than 10%', 'task_variant': 'COMPILE_SERVER-code_health', 'min_duration': '352.93secs', 'max_duration': '447.69secs', 'regression': 26.85}
+{'message': 'Task duration regressed by more than 10% from min duration', 'task_date': datetime.date(2023, 2, 21), 'min_duration': '352.93secs', 'task_duration': '388.49secs', 'regression': 10.08}
+{'message': 'Task duration regressed by more than 10% from min duration', 'task_date': datetime.date(2023, 2, 28), 'min_duration': '352.93secs', 'task_duration': '437.63secs', 'regression': 24.0}
+{'message': 'Task duration regressed by more than 10% from min duration', 'task_date': datetime.date(2023, 3, 7), 'min_duration': '352.93secs', 'task_duration': '447.69secs', 'regression': 26.85}
+```

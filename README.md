@@ -33,3 +33,15 @@ This tool will help us keep a copy of that.
 {'message': 'Message received from Slack', 'user_message': {'client_msg_id': 'ccbf4317-67c3-4bf9-a04d-af849884eb87', 'type': 'message', 'text': '```this is formatted stuff```', 'user': 'U04SD4ZLSJ3', 'ts': '1678222138.900689', 'blocks': [{'type': 'rich_text', 'block_id': '5GKV', 'elements': [{'type': 'rich_text_preformatted', 'elements': [{'type': 'text', 'text': 'this is formatted stuff'}], 'border': 0}]}], 'team': 'T01F60CPBRU', 'thread_ts': '1678222095.655119', 'parent_user_id': 'U04SD4ZLSJ3'}}
 {'message': 'Message received from Slack', 'user_message': {'client_msg_id': '47bc4c44-ae49-47ee-8435-b9bab587066c', 'type': 'message', 'text': "if this doesn't work then....", 'user': 'U04SD4ZLSJ3', 'ts': '1678222179.277849', 'blocks': [{'type': 'rich_text', 'block_id': 'PZPM1', 'elements': [{'type': 'rich_text_section', 'elements': [{'type': 'text', 'text': "if this doesn't work then...."}]}]}], 'team': 'T01F60CPBRU', 'thread_ts': '1678222095.655119', 'parent_user_id': 'U04SD4ZLSJ3'}}
 ```
+
+## Compute time regression of tasks from Evergreen data
+
+Looks over historic Evergreen data for tasks, grouped by (task, variant) over a specified 
+period of time and reports if 
+- max time has regressed more than 10% over min time
+- any task has regressed more than 10% over min time
+
+- Source code: _evergreen_task_regression_
+- run:
+  - `python3 <path>/evergreen_task_regression/task_regression.py --project mms --tasks COMPILE_BAZEL,COMPILE_CLIENT_BAZEL,COMPILE_SERVER --variants code_health --period 30 --weekly --verbose 
+ 

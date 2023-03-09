@@ -9,8 +9,7 @@ This utility helps to validate configs.
 
 - Source code: _verify_branch_cut_config_
 - run 
-  - debug mode: `python3 <path>/verify_branch_cut_config/verify_branch_config.py --project mms-v20230301 --verbose
-  `
+  - debug mode: `python3 <path>/verify_branch_cut_config/verify_branch_config.py --project mms-v20230301 --verbose`
   - normal mode: `python3 <path>/verify_branch_cut_config/verify_branch_config.py --project mms-v20230301`
 
 ## Unroll a Slack Thread
@@ -20,8 +19,8 @@ This tool will help us keep a copy of that.
 
 - Source code: _slack_thread_unroll_
 - run:
-  - PDF: `python3 <path>/slack_thread_unroll/thread_unroller.py --thread https://mdb-sandboxenterprise.slack.com/archives/C04SUBZ2X27/p1678222095655119 --pdf --verbose 
-  - txt: `python3 <path>/slack_thread_unroll/thread_unroller.py --thread https://mdb-sandboxenterprise.slack.com/archives/C04SUBZ2X27/p1678222095655119 
+  - PDF: `python3 <path>/slack_thread_unroll/thread_unroller.py --thread https://mdb-sandboxenterprise.slack.com/archives/C04SUBZ2X27/p1678222095655119 --pdf --verbose`
+  - txt: `python3 <path>/slack_thread_unroll/thread_unroller.py --thread https://mdb-sandboxenterprise.slack.com/archives/C04SUBZ2X27/p1678222095655119 `
 
 ```bash
 {'message': 'Unrolling a Slack thread'}
@@ -43,7 +42,7 @@ period of time and reports if
 
 - Source code: _evergreen_task_regression_
 - run:
-  - `python3 <path>/evergreen_task_regression/task_regression.py --project mms --tasks COMPILE_BAZEL,COMPILE_CLIENT_BAZEL,COMPILE_SERVER --variants code_health --period 30 --weekly --verbose 
+  - `python3 <path>/evergreen_task_regression/task_regression.py --project mms --tasks COMPILE_BAZEL,COMPILE_CLIENT_BAZEL,COMPILE_SERVER --variants code_health --period 30 --weekly --verbose`
 ```bash
 {'message': 'Attempting to find task regression'}
 {'message': 'Max time for task regressed by more than 10%', 'task_variant': 'COMPILE_BAZEL-code_health', 'min_duration': '123.87secs', 'max_duration': '137.1secs', 'regression': 10.68}

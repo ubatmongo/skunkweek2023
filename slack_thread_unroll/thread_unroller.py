@@ -109,7 +109,7 @@ def _unroll(arguments: Dict[str, Any]):
         paragraph_style = ParagraphStyle(
             name='Normal',
             fontName='Times-Roman',
-            fontSize=12,
+            fontSize=11,
             backColor='#F1F1F1',
             borderColor='#00000F',
             borderWidth=1,
@@ -127,13 +127,13 @@ def _unroll(arguments: Dict[str, Any]):
             # paragraphs.append(Paragraph(formatted_message, style = paragraph_style))
             # out_file.build(Paragraph(formatted_message, style = paragraph_style))
             paragraph = Paragraph(formatted_message, style=paragraph_style)
-            pwidth, pheight = paragraph.wrapOn(out_file, width - 10, 100)
+            pwidth, pheight = paragraph.wrapOn(out_file, width - 200, 50)
             logger.debug({
                 "message": "Height and width of the paragraph",
                 "p-width": pwidth,
                 "p-height": pheight
             })
-            paragraph.drawOn(out_file, width - 450, height - (pheight + 50) * (idx + 1))
+            paragraph.drawOn(out_file, width - 500, height - (pheight + 50) * (idx + 1))
 
         out_file.save()
 
